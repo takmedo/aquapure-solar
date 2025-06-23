@@ -1,6 +1,6 @@
 
 import { Card } from "@/components/ui/card";
-import { Sun, Droplet, Water, Flask } from "lucide-react";
+import { Sun, Droplet, Waves, Beaker } from "lucide-react";
 
 export const BenefitsSection = () => {
   return (
@@ -38,7 +38,7 @@ export const BenefitsSection = () => {
 
           <Card className="p-8 hover:shadow-lg transition-shadow border-cyan-200">
             <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
-              <Flask className="h-8 w-8 text-cyan-600" />
+              <Beaker className="h-8 w-8 text-cyan-600" />
             </div>
             <h3 className="text-xl font-bold mb-4 text-gray-900">Enhanced Water Quality</h3>
             <p className="text-gray-600">
@@ -48,7 +48,7 @@ export const BenefitsSection = () => {
 
           <Card className="p-8 hover:shadow-lg transition-shadow border-purple-200">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-              <Water className="h-8 w-8 text-purple-600" />
+              <Waves className="h-8 w-8 text-purple-600" />
             </div>
             <h3 className="text-xl font-bold mb-4 text-gray-900">Low Maintenance</h3>
             <p className="text-gray-600">

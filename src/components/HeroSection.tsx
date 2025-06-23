@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Droplet, Sun, Flask } from "lucide-react";
+import { Droplet, Sun, Beaker } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -55,7 +55,7 @@ export const HeroSection = () => {
               {/* Output */}
               <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Flask className="h-10 w-10 text-white" />
+                  <Beaker className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="font-semibold text-gray-700 mb-2">Pure Water</h3>
                 <p className="text-sm text-gray-500">50-150 mg/L TDS</p>

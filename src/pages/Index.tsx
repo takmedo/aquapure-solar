@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Droplet, Sun, Flask, Water, CircleArrowDown, Thermometer } from "lucide-react";
+import { Droplet, Sun, Beaker, Waves, CircleArrowDown, Thermometer } from "lucide-react";
 import { HeroSection } from "@/components/HeroSection";
 import { ProblemSection } from "@/components/ProblemSection";
 import { ProcessSection } from "@/components/ProcessSection";

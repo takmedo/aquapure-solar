@@ -1,6 +1,5 @@
-
 import { Card } from "@/components/ui/card";
-import { Water, Droplet, AlertTriangle } from "lucide-react";
+import { Waves, Droplet, AlertTriangle } from "lucide-react";
 
 export const ProblemSection = () => {
   return (
@@ -35,7 +34,7 @@ export const ProblemSection = () => {
 
           <Card className="p-8 text-center border-blue-200 hover:shadow-lg transition-shadow">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Water className="h-8 w-8 text-blue-600" />
+              <Waves className="h-8 w-8 text-blue-600" />
             </div>
             <h3 className="text-2xl font-bold text-blue-600 mb-2">Small Islands</h3>
             <p className="text-gray-600">Face unique challenges with saltwater intrusion and limited freshwater</p>
