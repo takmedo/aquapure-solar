@@ -1,6 +1,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Sun, Wind } from "lucide-react";
 
 export const SpecificationsSection = () => {
   return (
@@ -11,10 +12,10 @@ export const SpecificationsSection = () => {
             Technical Specifications
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Product Details & Dimensions
+            Hybrid Solar-Wind System Details
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Engineered for optimal performance, durability, and ease of use in challenging environments.
+            Engineered for optimal performance with integrated solar panels and mini wind turbine for enhanced evaporation and continuous operation.
           </p>
         </div>
 
@@ -25,46 +26,64 @@ export const SpecificationsSection = () => {
             <div className="space-y-4">
               <div className="flex justify-between items-center py-3 border-b border-gray-100">
                 <span className="font-medium text-gray-700">Base Tray (Water Basin)</span>
-                <span className="font-mono text-blue-600">40×30×10 cm</span>
+                <span className="font-mono text-blue-600">50×40×12 cm</span>
               </div>
               <div className="flex justify-between items-center py-3 border-b border-gray-100">
                 <span className="font-medium text-gray-700">Transparent Cover</span>
-                <span className="font-mono text-blue-600">45×35×5 cm</span>
+                <span className="font-mono text-blue-600">55×45×8 cm</span>
+              </div>
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="font-medium text-gray-700">Solar Panel Array</span>
+                <span className="font-mono text-blue-600">60×30×3 cm</span>
+              </div>
+              <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                <span className="font-medium text-gray-700">Mini Wind Turbine</span>
+                <span className="font-mono text-blue-600">Ø25×15 cm</span>
               </div>
               <div className="flex justify-between items-center py-3 border-b border-gray-100">
                 <span className="font-medium text-gray-700">Collection Trough</span>
-                <span className="font-mono text-blue-600">40 cm length</span>
+                <span className="font-mono text-blue-600">50 cm length</span>
               </div>
               <div className="flex justify-between items-center py-3 border-b border-gray-100">
                 <span className="font-medium text-gray-700">Mineral Cartridge</span>
-                <span className="font-mono text-blue-600">10×5 cm</span>
+                <span className="font-mono text-blue-600">12×6 cm</span>
               </div>
               <div className="flex justify-between items-center py-3">
                 <span className="font-medium text-gray-700">Total Weight</span>
-                <span className="font-mono text-green-600">≤ 3.5 kg</span>
+                <span className="font-mono text-green-600">≤ 5.5 kg</span>
               </div>
             </div>
           </Card>
 
           {/* Materials */}
           <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">Premium Materials</h3>
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">Premium Materials & Components</h3>
             <div className="space-y-4">
               <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold mb-2 text-gray-900 flex items-center">
+                  <Sun className="h-4 w-4 text-yellow-500 mr-2" />
+                  Solar Panel System
+                </h4>
+                <p className="text-gray-600">Monocrystalline silicon, 20W output, UV-resistant coating</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4">
+                <h4 className="font-semibold mb-2 text-gray-900 flex items-center">
+                  <Wind className="h-4 w-4 text-green-500 mr-2" />
+                  Mini Wind Turbine
+                </h4>
+                <p className="text-gray-600">3-blade design, ball bearings, starts at 2.5 m/s wind speed</p>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-4">
                 <h4 className="font-semibold mb-2 text-gray-900">Basin & Frame</h4>
-                <p className="text-gray-600">Food-safe stainless steel or UV-resistant polymer</p>
+                <p className="text-gray-600">Marine-grade stainless steel with anti-corrosion coating</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <h4 className="font-semibold mb-2 text-gray-900">Transparent Cover</h4>
-                <p className="text-gray-600">Tempered glass or UV-resistant acrylic</p>
+                <p className="text-gray-600">Tempered glass with anti-reflective coating</p>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <h4 className="font-semibold mb-2 text-gray-900">Seals & Gaskets</h4>
-                <p className="text-gray-600">Food-grade silicone for vapor-tight operation</p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-semibold mb-2 text-gray-900">Mineral Cartridge</h4>
-                <p className="text-gray-600">Natural shells, charcoal in mesh housing</p>
+                <p className="text-gray-600">Marine-grade silicone for vapor-tight operation</p>
               </div>
             </div>
           </Card>
@@ -72,7 +91,7 @@ export const SpecificationsSection = () => {
 
         {/* Performance Table */}
         <Card className="p-8 mt-12">
-          <h3 className="text-2xl font-bold mb-6 text-gray-900">Performance Specifications</h3>
+          <h3 className="text-2xl font-bold mb-6 text-gray-900">Enhanced Performance Specifications</h3>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -87,7 +106,7 @@ export const SpecificationsSection = () => {
                 <tr className="border-b border-gray-100">
                   <td className="py-3 px-4 font-medium text-gray-700">TDS (Total Dissolved Solids)</td>
                   <td className="py-3 px-4 text-red-600 font-mono">~35,000 mg/L</td>
-                  <td className="py-3 px-4 text-blue-600 font-mono">&lt;10 mg/L</td>
+                  <td className="py-3 px-4 text-blue-600 font-mono">&lt;5 mg/L</td>
                   <td className="py-3 px-4 text-green-600 font-mono">50-150 mg/L</td>
                 </tr>
                 <tr className="border-b border-gray-100">
@@ -112,7 +131,7 @@ export const SpecificationsSection = () => {
                   <td className="py-3 px-4 font-medium text-gray-700">Daily Production</td>
                   <td className="py-3 px-4 text-gray-500">-</td>
                   <td className="py-3 px-4 text-gray-500">-</td>
-                  <td className="py-3 px-4 text-green-600 font-mono">2-4 L/m²/day</td>
+                  <td className="py-3 px-4 text-green-600 font-mono">4-8 L/m²/day</td>
                 </tr>
               </tbody>
             </table>
@@ -120,14 +139,30 @@ export const SpecificationsSection = () => {
         </Card>
 
         {/* Operating Conditions */}
-        <div className="grid md:grid-cols-2 gap-8 mt-12">
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
           <Card className="p-6">
-            <h4 className="font-bold mb-4 text-gray-900">Optimal Operating Conditions</h4>
+            <h4 className="font-bold mb-4 text-gray-900 flex items-center">
+              <Sun className="h-5 w-5 text-yellow-500 mr-2" />
+              Solar Operation
+            </h4>
             <ul className="space-y-2 text-gray-600">
-              <li>• <strong>Temperature:</strong> 20-40°C ambient</li>
-              <li>• <strong>Sunlight:</strong> 6-8 hours direct exposure</li>
-              <li>• <strong>Humidity:</strong> &lt;80% relative humidity</li>
-              <li>• <strong>Wind:</strong> Minimal wind for best efficiency</li>
+              <li>• <strong>Peak hours:</strong> 6-10 hours direct sun</li>
+              <li>• <strong>Panel efficiency:</strong> 18-22%</li>
+              <li>• <strong>Temperature range:</strong> -20°C to +85°C</li>
+              <li>• <strong>Power output:</strong> 20W maximum</li>
+            </ul>
+          </Card>
+
+          <Card className="p-6">
+            <h4 className="font-bold mb-4 text-gray-900 flex items-center">
+              <Wind className="h-5 w-5 text-green-500 mr-2" />
+              Wind Turbine Operation
+            </h4>
+            <ul className="space-y-2 text-gray-600">
+              <li>• <strong>Start speed:</strong> 2.5 m/s wind</li>
+              <li>• <strong>Optimal speed:</strong> 5-15 m/s</li>
+              <li>• <strong>Blade material:</strong> Carbon fiber composite</li>
+              <li>• <strong>Noise level:</strong> &lt;35 dB</li>
             </ul>
           </Card>
 
@@ -135,9 +170,9 @@ export const SpecificationsSection = () => {
             <h4 className="font-bold mb-4 text-gray-900">Maintenance Schedule</h4>
             <ul className="space-y-2 text-gray-600">
               <li>• <strong>Daily:</strong> Check water levels</li>
-              <li>• <strong>Weekly:</strong> Clean transparent cover</li>
+              <li>• <strong>Weekly:</strong> Clean panels & cover</li>
               <li>• <strong>Monthly:</strong> Replace mineral cartridge</li>
-              <li>• <strong>Seasonal:</strong> Inspect seals and gaskets</li>
+              <li>• <strong>Quarterly:</strong> Turbine bearing check</li>
             </ul>
           </Card>
         </div>
