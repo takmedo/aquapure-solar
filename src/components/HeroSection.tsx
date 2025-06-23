@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Droplet, Sun, Beaker, Wind } from "lucide-react";
@@ -12,7 +11,7 @@ export const HeroSection = () => {
             Revolutionary Solar + Wind Water Technology
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent leading-tight">
-            Pure Water from
+            AquaPure
             <br />
             Solar + Wind Energy
           </h1>
