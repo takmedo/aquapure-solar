@@ -12,8 +12,6 @@ export const HeroSection = () => {
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent leading-tight">
             AquaPure
-            <br />
-            Solar + Wind Energy
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Transform seawater and brackish water into clean, mineralized drinking water using our innovative hybrid solar-wind distillation system. Featuring integrated solar panels and mini wind turbine for enhanced evaporation and continuous operation.
