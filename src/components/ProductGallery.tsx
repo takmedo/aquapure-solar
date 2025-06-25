@@ -23,7 +23,7 @@ export const ProductGallery = () => {
           <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <div className="aspect-square relative">
               <img 
-                src="/lovable-uploads/7d92f417-7ee5-4345-ad34-c34cafbbb536.png" 
+                src="/lovable-uploads/8f6adc71-3648-4715-b21a-a6b7448d5d6c.png" 
                 alt="AquaPure prototype showing the complete system with solar lid and collection container"
                 className="w-full h-full object-cover"
               />
@@ -42,7 +42,7 @@ export const ProductGallery = () => {
           <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <div className="aspect-square relative">
               <img 
-                src="/lovable-uploads/dd466b74-67a3-4b97-a6b4-ad3492982167.png" 
+                src="/lovable-uploads/4258cb8a-b61d-4e5c-99df-7c19feedaa00.png" 
                 alt="Close-up view of AquaPure showing the clean, minimalist design and beige color scheme"
                 className="w-full h-full object-cover"
               />
