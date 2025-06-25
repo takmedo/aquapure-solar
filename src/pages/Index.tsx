@@ -6,6 +6,7 @@ import { Droplet, Sun, Beaker, Waves, CircleArrowDown, Thermometer } from "lucid
 import { HeroSection } from "@/components/HeroSection";
 import { ProblemSection } from "@/components/ProblemSection";
 import { ProcessSection } from "@/components/ProcessSection";
+import { ProductGallery } from "@/components/ProductGallery";
 import { SpecificationsSection } from "@/components/SpecificationsSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -38,6 +39,7 @@ const Index = () => {
       <HeroSection />
       <ProblemSection />
       <ProcessSection />
+      <ProductGallery />
       <BenefitsSection />
       <SpecificationsSection />
       <ContactSection />
