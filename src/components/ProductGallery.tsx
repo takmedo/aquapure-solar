@@ -23,7 +23,7 @@ export const ProductGallery = () => {
           <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <div className="aspect-square relative">
               <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
+                src="/lovable-uploads/7d92f417-7ee5-4345-ad34-c34cafbbb536.png" 
                 alt="AquaPure prototype showing the complete system with solar lid and collection container"
                 className="w-full h-full object-cover"
               />
@@ -42,7 +42,7 @@ export const ProductGallery = () => {
           <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
             <div className="aspect-square relative">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80" 
+                src="/lovable-uploads/dd466b74-67a3-4b97-a6b4-ad3492982167.png" 
                 alt="Close-up view of AquaPure showing the clean, minimalist design and beige color scheme"
                 className="w-full h-full object-cover"
               />
