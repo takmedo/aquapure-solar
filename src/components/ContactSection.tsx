@@ -4,8 +4,78 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+import { Mail } from "lucide-react";
 
 export const ContactSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    organization: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Simulate sending email - in a real app, this would go through a backend service
+      const emailData = {
+        to: 'hammataktak@yahoo.com',
+        subject: `AquaPure Inquiry from ${formData.firstName} ${formData.lastName}`,
+        body: `
+          New inquiry from AquaPure website:
+          
+          Name: ${formData.firstName} ${formData.lastName}
+          Email: ${formData.email}
+          Organization: ${formData.organization}
+          
+          Message:
+          ${formData.message}
+        `
+      };
+
+      console.log('Email would be sent with data:', emailData);
+
+      // Show success message
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your interest in AquaPure. We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        organization: '',
+        message: ''
+      });
+
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
@@ -25,49 +95,84 @@ export const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
           <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">Request Information</h3>
-            <form className="space-y-6">
+            <div className="flex items-center gap-2 mb-6">
+              <Mail className="h-6 w-6 text-blue-600" />
+              <h3 className="text-2xl font-bold text-gray-900">Request Information</h3>
+            </div>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name
+                    First Name *
                   </label>
-                  <Input placeholder="Enter your first name" />
+                  <Input 
+                    name="firstName"
+                    placeholder="Enter your first name" 
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name
+                    Last Name *
                   </label>
-                  <Input placeholder="Enter your last name" />
+                  <Input 
+                    name="lastName"
+                    placeholder="Enter your last name" 
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    required
+                  />
                 </div>
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address
+                  Email Address *
                 </label>
-                <Input type="email" placeholder="Enter your email" />
+                <Input 
+                  type="email" 
+                  name="email"
+                  placeholder="Enter your email" 
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Organization/Location
                 </label>
-                <Input placeholder="Organization or location" />
+                <Input 
+                  name="organization"
+                  placeholder="Organization or location" 
+                  value={formData.organization}
+                  onChange={handleInputChange}
+                />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
+                  Message *
                 </label>
                 <Textarea 
+                  name="message"
                   placeholder="Tell us about your water challenges and how we can help..."
                   rows={4}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
                 />
               </div>
               
-              <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700">
-                Send Message
+              <Button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </Card>

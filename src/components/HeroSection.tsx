@@ -1,8 +1,14 @@
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Droplet, Sun, Beaker, Wind } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Droplet, Sun, Beaker, Wind, Play, BookOpen } from "lucide-react";
+import { useState } from "react";
 
 export const HeroSection = () => {
+  const [learnMoreOpen, setLearnMoreOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
+
   return (
     <section className="pt-24 pb-16 px-6">
       <div className="container mx-auto text-center max-w-6xl">
@@ -19,12 +25,75 @@ export const HeroSection = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg px-8 py-3">
-            Learn More
-          </Button>
-          <Button size="lg" variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
-            View Demo
-          </Button>
+          <Dialog open={learnMoreOpen} onOpenChange={setLearnMoreOpen}>
+            <DialogTrigger asChild>
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg px-8 py-3">
+                <BookOpen className="mr-2 h-5 w-5" />
+                Learn More
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-2xl">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-gray-900">About AquaPure Technology</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4 text-left">
+                <p className="text-gray-600">
+                  AquaPure represents a breakthrough in sustainable water purification technology, combining solar and wind energy to create clean drinking water from seawater and brackish water sources.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-900 mb-2">Solar Integration</h4>
+                    <p className="text-sm text-blue-700">Direct solar heating accelerates the evaporation process, making distillation more efficient even in moderate sunlight conditions.</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-900 mb-2">Wind Enhancement</h4>
+                    <p className="text-sm text-green-700">Mini wind turbine improves air circulation, enhancing condensation and enabling 24/7 operation.</p>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 mb-2">Mineral Restoration</h4>
+                  <p className="text-sm text-gray-700">Our integrated mineral filter ensures the purified water contains essential minerals for optimal health and taste.</p>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          <Dialog open={demoOpen} onOpenChange={setDemoOpen}>
+            <DialogTrigger asChild>
+              <Button size="lg" variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
+                <Play className="mr-2 h-5 w-5" />
+                View Demo
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-3xl">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-gray-900">AquaPure Demo</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-6">
+                <div className="aspect-video bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <Play className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+                    <p className="text-blue-600 font-semibold">Interactive Demo Coming Soon</p>
+                    <p className="text-sm text-blue-500 mt-2">Experience our virtual prototype</p>
+                  </div>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="font-semibold text-gray-900">Step 1</div>
+                    <div className="text-gray-600">Add seawater to the distillation chamber</div>
+                  </div>
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="font-semibold text-gray-900">Step 2</div>
+                    <div className="text-gray-600">Solar + wind energy begins purification</div>
+                  </div>
+                  <div className="text-center p-3 bg-gray-50 rounded-lg">
+                    <div className="font-semibold text-gray-900">Step 3</div>
+                    <div className="text-gray-600">Collect clean, mineralized water</div>
+                  </div>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
 
         {/* Product Visualization */}
